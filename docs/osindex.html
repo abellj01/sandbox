@@ -130,7 +130,8 @@
     // Add an event listener to handle when the user clicks the 'Find Greenspace' button.
     document.getElementById('request').addEventListener('click', function() {
         // Get the centre point of the map window.
-        var center = map.getCenter().toArray();
+        var center = [-0.104951, 51.520623 ];
+
 
         // {Turf.js} Takes the centre point coordinates and calculates a circular polygon
         // of the given a radius in kilometers; and steps for precision.
