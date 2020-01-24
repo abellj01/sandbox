@@ -55,10 +55,10 @@
     // Initialize the map object.
     var map = new mapboxgl.Map({
         container: 'map',
-        maxZoom: 14,
+        maxZoom: 17,
         style: serviceUrl + '/resources/styles',
         center: [-0.104951, 51.520623 ],
-        zoom: 15,
+        zoom: 14,
         transformRequest: function(url) {
             url += '?key=' + apiKey + '&srs=3857';
             return {
