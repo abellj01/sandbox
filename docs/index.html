@@ -49,7 +49,7 @@
 <script>
 
 
-    var apiKey = 'HRQqp4yN8hLHepJEg2fG4kFS69w1oVap'
+    var apiKey = '5FXQAScgfjcwQVpvIUHJncvfOjS7hKGf'
     var serviceUrl = 'https://osdatahubapi.os.uk/OSVectorTileAPI/vts/v1';
 
     // Initialize the map object.
@@ -57,7 +57,7 @@
         container: 'map',
         maxZoom: 15,
         style: serviceUrl + '/resources/styles',
-        center: [ -0.126, 51.502 ],
+        center: [ -0.104759, 51.520698 ],
         zoom: 13,
         transformRequest: function(url) {
             url += '?key=' + apiKey + '&srs=3857';
@@ -130,11 +130,12 @@
     // Add an event listener to handle when the user clicks the 'Find Greenspace' button.
     document.getElementById('request').addEventListener('click', function() {
         // Get the centre point of the map window.
-        var center = map.getCenter().toArray();
+        //var center = map.getCenter().toArray();
+        var center = [ -0.104759, 51.520698 ];
 
         // {Turf.js} Takes the centre point coordinates and calculates a circular polygon
         // of the given a radius in kilometers; and steps for precision.
-        var circle = turf.circle(center, 1, { steps: 24, units: 'kilometers' });
+        var circle = turf.circle(center, 0.1, { steps: 24, units: 'kilometers' });
 
         // Set the GeoJSON data for the 'circle' layer and re-render the map.
         map.getSource('circle').setData(circle);
