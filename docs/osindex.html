@@ -55,10 +55,10 @@
     // Initialize the map object.
     var map = new mapboxgl.Map({
         container: 'map',
-        maxZoom: 15,
+        maxZoom: 14,
         style: serviceUrl + '/resources/styles',
         center: [-0.104951, 51.520623 ],
-        zoom: 13,
+        zoom: 15,
         transformRequest: function(url) {
             url += '?key=' + apiKey + '&srs=3857';
             return {
@@ -135,7 +135,7 @@
 
         // {Turf.js} Takes the centre point coordinates and calculates a circular polygon
         // of the given a radius in kilometers; and steps for precision.
-        var circle = turf.circle(center, 0.1, { steps: 24, units: 'kilometers' });
+        var circle = turf.circle(center, 0.5, { steps: 24, units: 'kilometers' });
 
         // Set the GeoJSON data for the 'circle' layer and re-render the map.
         map.getSource('circle').setData(circle);
