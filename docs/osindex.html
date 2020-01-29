@@ -40,7 +40,7 @@
 <div id='map'></div>
 <div class='map-overlay top'>
     <div class='map-overlay-inner'>
-        <button id='request'>Find Greenspace</button>
+        <button id='request'>Find localBuildings</button>
         <div>Total features: <span id='feature-count'></span></div>
     </div>
 </div>
@@ -112,9 +112,9 @@
             }
         });
 
-        // Add an empty GeoJSON style layer for the Greenspace features.
+        // Add an empty GeoJSON style layer for the localBuildings features.
         map.addLayer({
-            "id": "greenspace",
+            "id": "localBuildings",
             "type": "fill",
             "source": {
                 "type": "geojson",
@@ -127,7 +127,7 @@
         });
     });
 
-    // Add an event listener to handle when the user clicks the 'Find Greenspace' button.
+    // Add an event listener to handle when the user clicks the 'Find localBuildings' button.
     document.getElementById('request').addEventListener('click', function() {
         // Get the centre point of the map window.
         var center = [-0.104951, 51.520623 ];
@@ -143,7 +143,7 @@
         // Get the flipped geometry coordinates and return a new space-delimited string.
         var coords = circle.geometry.coordinates[0].join(' ');
 
-        // Create an OGC XML filter parameter value which will select the Greenspace
+        // Create an OGC XML filter parameter value which will select the localBuildings
         // features intersecting the circle polygon coordinates.
         var xml = '<ogc:Filter>';
         xml += '<ogc:Intersects>';
@@ -164,7 +164,7 @@
             service: 'WFS',
             request: 'GetFeature',
             version: '2.0.0',
-            typeNames: 'Zoomstack_Greenspace',
+            typeNames: 'Zoomstack_LocalBuildings',
             outputFormat: 'GEOJSON',
             srsName: 'urn:ogc:def:crs:EPSG::4326',
             filter: xml,
@@ -176,12 +176,12 @@
 
         geojson.features.length = 0;
 
-        map.getSource('greenspace').setData(geojson);
+        map.getSource('localBuildings').setData(geojson);
         document.getElementById('feature-count').innerHTML = '';
 
         // Use fetch() method to request GeoJSON data from the OS Features API.
         //
-        // If successful - set the GeoJSON data for the 'greenspace' layer and re-render
+        // If successful - set the GeoJSON data for the 'localBuildings' layer and re-render
         // the map.
         //
         // Calls will be made until the number of features returned is less than the
@@ -202,7 +202,7 @@
                     });
             }
             else {
-                map.getSource('greenspace').setData(geojson);
+                map.getSource('localBuildings').setData(geojson);
                 document.getElementById('feature-count').innerHTML = geojson.features.length;
             }
         }
