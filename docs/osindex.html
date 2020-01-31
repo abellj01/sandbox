@@ -185,8 +185,7 @@
 
     // Add an event listener to handle when the user clicks the 'Find localBuildings' button.
    function drawAll(center) {
-        // Get the centre point of the map window.
-debugger
+
         // {Turf.js} Takes the centre point coordinates and calculates a circular polygon
         // of the given a radius in kilometers; and steps for precision.
         var circle = turf.circle(center, 0.5, { steps: 24, units: 'kilometers' });
