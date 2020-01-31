@@ -106,10 +106,10 @@
     //Station json
 
     let stationJson = {
-                        "stations": 
+                        "stations":
                         [
                         {'Station_Name': 'Farringdon', 'coordinates': [-0.1070064,  51.5202109]},
-                        {'Station_Name': 'Edinburgh Waverley', 'coordinates': [-3.1917618,  55.9519361]}, 
+                        {'Station_Name': 'Edinburgh Waverley', 'coordinates': [-3.1917618,  55.9519361]},
                         {"Station_Name": "York", 'coordinates': [-1.0953797,  53.9579841]},
                         {'Station_Name': 'Liverpool Lime Street', 'coordinates': [-2.9795018, 53.4076217]},
                         {'Station_Name': 'Waterloo', 'coordinates': [-0.1144938,  51.5031686]},
@@ -123,22 +123,26 @@
 
 
 
- 
+
     //Click on an option in the nav bar, and the map will fly to the location of that station.
     document.getElementById("stationSelect").addEventListener('change', function() {
+        let coords;
         let stationList = stationJson.stations;
         for(let i =0; i<stationList.length; i++){
             if (document.getElementById("stationSelect").value == stationList[i].Station_Name){
-                map.flyTo({ 
-                    center: stationList[i].coordinates,
+              coords =  stationList[i].coordinates;
+                map.flyTo({
+                    center: coords,
                     zoom: 14,
                     essential: true
                 })
             }
         }
 
-    }); 
-    
+        drawAll(coords)
+
+    });
+
 
     // Create an empty GeoJSON FeatureCollection.
     var geojson = {
@@ -180,11 +184,9 @@
     });
 
     // Add an event listener to handle when the user clicks the 'Find localBuildings' button.
-    document.getElementById('request').addEventListener('click', function() {
+   function drawAll(center) {
         // Get the centre point of the map window.
-        var center = [-0.104951, 51.520623 ];
-
-
+debugger
         // {Turf.js} Takes the centre point coordinates and calculates a circular polygon
         // of the given a radius in kilometers; and steps for precision.
         var circle = turf.circle(center, 0.5, { steps: 24, units: 'kilometers' });
@@ -194,7 +196,7 @@
 
         // Get the flipped geometry coordinates and return a new space-delimited string.
         var coords = circle.geometry.coordinates[0].join(' ');
-       
+
         // Create an OGC XML filter parameter value which will select the localBuildings
         // features intersecting the circle polygon coordinates.
         var xml = '<ogc:Filter>';
@@ -257,20 +259,20 @@
             else {
                 map.getSource('localBuildings').setData(geojson);
                 document.getElementById('feature-count').innerHTML = geojson.features.length;
-                
+
                 // To calculate the area, rounded to 3 decimal places
                 let area = 0;
                 let feature = geojson.features;
                 for(let i=0; i<feature.length; i++){
                     area += geojson.features[i].properties.SHAPE_Area
-                    
+
                     }
                 document.getElementById('area').innerHTML = (area/1000).toFixed(2);
                 }
             }
 
         fetchWhile(resultsRemain);
-    });
+    }
 
     /**
      * Return URL with encoded parameters.
