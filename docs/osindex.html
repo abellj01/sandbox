@@ -130,7 +130,7 @@
         let stationList = stationJson.stations;
         for(let i =0; i<stationList.length; i++){
             if (document.getElementById("stationSelect").value == stationList[i].Station_Name){
-              coords =  stationList[i].coordinates;
+                coords =  stationList[i].coordinates;
                 map.flyTo({
                     center: coords,
                     zoom: 14,
