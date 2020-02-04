@@ -338,9 +338,9 @@
           for (let i = 0; i < feature.length; i++) {
             // Area in kilometers square
             area += (geojson.features[i].properties.SHAPE_Area) / 1000000
-            ratio = area / circle_area
-
           }
+
+          ratio = area / circle_area
           document.getElementById('area').innerHTML = area.toFixed(2);
           document.getElementById('ratio').innerHTML = ratio.toFixed(3);
         }
