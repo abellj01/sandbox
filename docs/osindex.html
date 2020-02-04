@@ -254,9 +254,10 @@
 
     function drawAll(center) {
 
+      circle_radius = 0.5
       // {Turf.js} Takes the centre point coordinates and calculates a circular polygon
       // of the given a radius in kilometers; and steps for precision.
-      var circle = turf.circle(center, 0.5, {
+      var circle = turf.circle(center, circle_radius, {
         steps: 24,
         units: 'kilometers'
       });
@@ -332,15 +333,16 @@
           // To calculate the area, rounded to 3 decimal places
           let area = 0;
           let ratio = 0;
-          let circle_area = Math.PI * 0.5 * 0.5;
+          const circle_area = Math.PI * circle_radius * circle_radius;
           let feature = geojson.features;
           for (let i = 0; i < feature.length; i++) {
-            area += geojson.features[i].properties.SHAPE_Area
+            // Area in kilometers square
+            area += (geojson.features[i].properties.SHAPE_Area) / 1000000
             ratio = area / circle_area
 
           }
-          document.getElementById('area').innerHTML = (area / 1000000).toFixed(2);
-          document.getElementById('ratio').innerHTML = (ratio / 1000000).toFixed(3);
+          document.getElementById('area').innerHTML = area.toFixed(2);
+          document.getElementById('ratio').innerHTML = ratio.toFixed(3);
         }
       }
 
