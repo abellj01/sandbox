@@ -2,50 +2,49 @@
 <html>
 
 <head>
-    <title>Testing OS Features: Finding Building Areas Around Train Stations</title>
-    <meta charset='utf-8' />
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css' rel='stylesheet' />
-    <link href ="styles.css" rel = "stylesheet" /> 
+  <title>Testing OS Features: Finding Building Areas Around Train Stations</title>
+  <meta charset='utf-8' />
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <link href="osbuildingarea_styles.css" rel="stylesheet" />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js'></script>
+  <link rel='stylesheet' href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css' />
 </head>
 
 <body>
-    <link href ="styles.css" rel = "stylesheet" />
-    <div id='map'></div>
-    <div class='map-overlay top'>
-        <div class='map-overlay-inner'>
-            <div>Total features: <span id='feature-count'></span></div>
-            <div>Total building area (<b>km<sup>2</sup></b>): <span id='area'></span></div>
-            <div>Total ratio: <span id='ratio'></span></div>
-            <div class="colorKey">
-                <div class="keyTitle"><b>Ratio of building area to total area</b></div>
-                <div class="flex-container">
-                    <div class="square" id="red"></div>
-                    <div>&#8805; 0.45</div>
-                </div>
-                <div class="flex-container">
-                    <div class="square" id="orange"></div>
-                    <div>0.3-0.44</div>
-                </div>
-                <div class="flex-container">
-                    <div class="square" id="yellow"></div>
-                    <div>0.15-0.29</div>
-                </div>
-                <div class="flex-container">
-                    <div class="square" id="green"></div>
-                    <div> &#60; 0.15 </div>
-                </div>
-            </div>
-            <div>
-                <select id="stationSelect">
-                    <!-- Option tags from addElement function go here  -->
-                </select>
-            </div>
+  <div id='map'></div>
+  <div class='map-overlay top'>
+    <div class='map-overlay-inner'>
+      <div>Total features: <span id='feature-count'></span></div>
+      <div>Total building area (<b>km<sup>2</sup></b>): <span id='area'></span></div>
+      <div>Total ratio: <span id='ratio'></span></div>
+      <div class="colorKey">
+        <div class="keyTitle"><b>Ratio of building area to total area</b></div>
+        <div class="flex-container">
+          <div class="square" id="red"></div>
+          <div>&#8805; 0.45</div>
         </div>
+        <div class="flex-container">
+          <div class="square" id="orange"></div>
+          <div>0.3-0.44</div>
+        </div>
+        <div class="flex-container">
+          <div class="square" id="yellow"></div>
+          <div>0.15-0.29</div>
+        </div>
+        <div class="flex-container">
+          <div class="square" id="green"></div>
+          <div> &#60; 0.15 </div>
+        </div>
+      </div>
+      <div>
+        <select id="stationSelect">
+          <!-- Option tags from addElement function go here  -->
+        </select>
+      </div>
     </div>
-    <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
-    <script src="osScript.js"></script>
+  </div>
+  <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
+  <script src="osbuildarea_script.js"></script>
 </body>
 
 </html>
