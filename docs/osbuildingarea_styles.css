@@ -28,7 +28,6 @@ body {
 }
 
 .map-overlay-inner div {
-    display: block flex;
     margin-top: 10px;
 }
 
@@ -45,6 +44,10 @@ body {
 .keyTitle {
     padding-top: 30px;
     margin-bottom: -15px;
+}
+
+.stattionInfo {
+    padding-top: 10px;
 }
 
 .square {

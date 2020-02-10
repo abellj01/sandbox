@@ -14,6 +14,13 @@
   <div id='map'></div>
   <div class='map-overlay top'>
     <div class='map-overlay-inner'>
+      <h3>Station noise impact</h3>
+      <div>
+        <select id="stationSelect">
+          <!-- Option tags from addElement function go here  -->
+        </select>
+      </div>
+      <div class="stattionInfo"><b>Your station information</b></div>
       <div>Total features: <span id='feature-count'></span></div>
       <div>Total building area (<b>km<sup>2</sup></b>): <span id='area'></span></div>
       <div>Total ratio: <span id='ratio'></span></div>
@@ -35,11 +42,6 @@
           <div class="square" id="green"></div>
           <div> &#60; 0.15 </div>
         </div>
-      </div>
-      <div>
-        <select id="stationSelect">
-          <!-- Option tags from addElement function go here  -->
-        </select>
       </div>
     </div>
   </div>
