@@ -9,8 +9,27 @@
 
 <body>
   <h1>Welcome to Geovation Sandbox</h1>
-  <p>This web application aims to measure the noise impact near any random railway station in the UK and Ireland. You simply select a station from the dropdown menu and it </p>
-  <p>You can test it by visiting <a href="osbuilding_area_ratio.html">our next page</a>.</p>
+  <ul>
+    <li>
+      <h2><a href="osbuilding_area_ratio.html">Stations Noise impact</a></h2>
+      <p>This web application aims to measure the noise impact to buildings near any random railway station in the UK and Ireland within a 500m radius. </br>
+        This application is using the content of the <a href="https://osdatahub.os.uk/docs/vts/overview">OS Vector Tile API</a> in the "Road" style to generate the map, as well as the <a
+          href="https://osdatahub.os.uk/docs/wfs/technicalSpecification">OS
+          Features API</a> product OS Zoomstack Layer, with the
+        feature typenames listed below.</p>
+      <ul>
+        <li>Zoomstack_Railway_Stations</li>
+        <li>Zoomstack_District_Buildings</li>
+      </ul>
+      <p>You can test the application by visiting <a href="osbuilding_area_ratio.html">Stations Noise impact</a>. You simply select a station from the dropdown menu and it generates the following information related to the station </p>
+      <ul>
+        <li>The total number of buildings within the radius</li>
+        <li>Their total area</li>
+        <li>The noise impact obtained by the ratio of buildings area to that of the radius</li>
+      </ul>
+    </li>
+  </ul>
+
 </body>
 
 </html>
