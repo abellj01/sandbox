@@ -1,0 +1,40 @@
+/* Index page styling */
+
+div .welcome {
+  margin: 100px;
+  padding: 50;
+}
+
+.my_index {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.my_index li {
+  float: left;
+}
+
+.my_index li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+  background-color: #dddddd;
+}
+
+.my_index li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+.my_index li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.my_index li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
