@@ -68,7 +68,7 @@
         minZoom: 7,
         maxZoom: 20,
         style: style,
-        center: [ -1.356, 50.950 ],
+        center: [-1.639597655284689, 60.29719844843698],
         zoom: 11
     });
 
@@ -157,15 +157,19 @@
         // features (site function) intersecting the BBOX coordinates.
         var xml = '<ogc:Filter>';
         xml += '<ogc:And>';
-        xml += '<ogc:BBOX>';
+        xml += '<ogc:Intersects>';
         xml += '<ogc:PropertyName>SHAPE</ogc:PropertyName>';
-        xml += '<gml:Box srsName="urn:ogc:def:crs:EPSG::4326">';
+        xml += '<gml:Polygon srsName="urn:ogc:def:crs:EPSG::4326">';
+        xml += '<gml:outerBoundaryIs>';
+        xml += '<gml:LinearRing>';
         xml += '<gml:coordinates>' + coords + '</gml:coordinates>';
-        xml += '</gml:Box>';
-        xml += '</ogc:BBOX>';
+        xml += '</gml:LinearRing>';
+        xml += '</gml:outerBoundaryIs>';
+        xml += '</gml:Polygon>';
+        xml += '</ogc:Intersects>';
         xml += '<ogc:PropertyIsEqualTo>';
-        xml += '<ogc:PropertyName>SiteFunction</ogc:PropertyName>';
-        xml += '<ogc:Literal>Airport</ogc:Literal>';
+        xml += '<ogc:PropertyName>DescriptiveTerm</ogc:PropertyName>';
+        xml += '<ogc:Literal>Wind Turbine</ogc:Literal>';
         xml += '</ogc:PropertyIsEqualTo>';
         xml += '</ogc:And>';
         xml += '</ogc:Filter>';
@@ -176,7 +180,7 @@
             service: 'WFS',
             request: 'GetFeature',
             version: '2.0.0',
-            typeNames: 'Sites_FunctionalSite',
+            typeNames: 'Topography_TopographicPoint',
             outputFormat: 'GEOJSON',
             srsName: 'urn:ogc:def:crs:EPSG::4326',
             filter: xml
