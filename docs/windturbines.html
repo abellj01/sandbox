@@ -198,6 +198,10 @@
                 // ensure the geometry has no self-intersections.
                 var result = turf.unkinkPolygon(turf.rewind(data));
                 map.getSource('windTurbines').setData(result);
+                console.log(data.features)
+                data.features.forEach(function(feature){
+                    let marker = new mapboxgl.Marker().setLngLat(feature.geometry.coordinates[0][0]).addTo(map)
+                })
             });
     }
 
