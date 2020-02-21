@@ -107,25 +107,43 @@ map.on('load', function() {
 
   // When a click event occurs on a feature in the 'airports' layer, open a popup at
   // the location of the click, with description HTML from its properties.
-  map.on('click', 'windTurbines', function(e) {
+  map.on('click', 'woodland', function(e) {
     new mapboxgl.Popup()
       .setLngLat(e.lngLat)
-      .setHTML(e.features[0].properties.DescriptiveTerm)
+      .setHTML("Area: " + e.features[0].properties.SHAPE_Area.toFixed(2))
       .addTo(map);
-
-
-
   });
 
   // Change the cursor to a pointer when the mouse is over the 'airports' layer.
-  map.on('mouseenter', 'windTurbines', function() {
+  map.on('mouseenter', 'woodland', function() {
     map.getCanvas().style.cursor = 'pointer';
   });
 
   // Change the cursor back to a pointer when it leaves the 'airports' layer.
-  map.on('mouseleave', 'windTurbines', function() {
+  map.on('mouseleave', 'woodland', function() {
     map.getCanvas().style.cursor = '';
   });
+
+  map.on('click', 'windTurbine', function(e) {
+    new mapboxgl.Popup()
+      .setLngLat(e.lngLat)
+      .setHTML(e.features[0].properties.DescriptiveTerm)
+      .addTo(map);
+  });
+
+  // Change the cursor to a pointer when the mouse is over the 'airports' layer.
+  map.on('mouseenter', 'windTurbine', function() {
+    map.getCanvas().style.cursor = 'pointer';
+  });
+
+  // Change the cursor back to a pointer when it leaves the 'airports' layer.
+  map.on('mouseleave', 'windTurbine', function() {
+    map.getCanvas().style.cursor = '';
+  });
+
+
+
+
 });
 
 /**
@@ -155,8 +173,10 @@ function getFeatures(bounds) {
   xml += '</ogc:And>';
   xml += '</ogc:Filter>';
 
-  let woodXml = xml.replace('<ogc:And>', '').split("<ogc:PropertyIsEqual")[0] + '</ogc:Filter>';
+  let regex = /IsEqualTo/g
 
+  let woodXml = xml.replace(regex, 'IsGreaterThanOrEqualTo').replace("DescriptiveTerm", "SHAPE_Area").replace("Wind Turbine", "200000")
+  
   // Define (WFS) parameters object.
   var wfsParams = {
     key: apiKey,
@@ -178,7 +198,7 @@ function getFeatures(bounds) {
     typeNames: 'Zoomstack_Woodland',
     outputFormat: 'GEOJSON',
     srsName: 'urn:ogc:def:crs:EPSG::4326',
-    filter: woodXml
+    filter: woodXml 
   };
   // Use fetch() method to request GeoJSON data from the OS Features API.
   // If successful - set the GeoJSON data for the 'airports' layer and re-render
