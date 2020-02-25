@@ -1,4 +1,4 @@
-var apiKey = '5FXQAScgfjcwQVpvIUHJncvfOjS7hKGf';
+var apiKey = 'HRQqp4yN8hLHepJEg2fG4kFS69w1oVap';
 
 var serviceUrl = 'https://osdatahubapi.os.uk/OSMapsAPI/wmts/v1';
 
@@ -105,7 +105,7 @@ map.on('load', function() {
     }
   });
 
-  
+
 
   // Change the cursor to a pointer when the mouse is over the 'airports' layer.
   map.on('mouseenter', 'woodland', function() {
@@ -169,7 +169,7 @@ function getFeatures(bounds) {
   let regex = /IsEqualTo/g
 
   let woodXml = xml.replace(regex, 'IsGreaterThanOrEqualTo').replace("DescriptiveTerm", "SHAPE_Area").replace("Wind Turbine", "200000")
-  
+
   // Define (WFS) parameters object.
   var wfsParams = {
     key: apiKey,
@@ -191,7 +191,7 @@ function getFeatures(bounds) {
     typeNames: 'Zoomstack_Woodland',
     outputFormat: 'GEOJSON',
     srsName: 'urn:ogc:def:crs:EPSG::4326',
-    filter: woodXml 
+    filter: woodXml
   };
   // Use fetch() method to request GeoJSON data from the OS Features API.
   // If successful - set the GeoJSON data for the 'airports' layer and re-render
@@ -221,8 +221,8 @@ function getFeatures(bounds) {
       // ensure the geometry has no self-intersections.
       var result = turf.unkinkPolygon(turf.rewind(data));
       map.getSource('woodland').setData(result);
-      
-      // data.features.forEach(function(feature){ 
+
+      // data.features.forEach(function(feature){
       //   new mapboxgl.Marker({color: "#F00"}).setLngLat(turf.center(turf.polygon(feature.geometry.coordinates)).geometry.coordinates).addTo(map)
       // })
       let woodFeatures = data.features
@@ -237,11 +237,11 @@ function getFeatures(bounds) {
         .setPopup(woodlandPopup)
         .addTo(map)
       }
-      
+
     });
 
 
-    
+
 }
 
 /**
