@@ -1,0 +1,61 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [-2.583449, 51.449021]
+     },
+     "properties": {
+     "Company Name":"The Engine Shed",
+     "Address 1: Street 1":"Station Approach",
+     "Address 1: Street 2":"Temple Meads",
+     "Address 1: Street 3":"",
+     "Address 1: ZIP/Postal Code":"BS1 6QH"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [-2.2377183, 53.4636066]
+     },
+     "properties": {
+     "Company Name":"Manchester Science Partnerships Ltd",
+     "Address 1: Street 1":"Bright Building",
+     "Address 1: Street 2":"Manchester Science Park",
+     "Address 1: Street 3":"Pencroft Way",
+     "Address 1: ZIP/Postal Code":"M15 6JJ"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [-1.8881637, 52.4887511]
+     },
+     "properties": {
+     "Company Name":"Innovation Birmingham ",
+     "Address 1: Street 1":"Innovation Birmingham Limited ",
+     "Address 1: Street 2":"Faraday Wharf, Innovation Birmingham Campus,",
+     "Address 1: Street 3":"Holt Street",
+     "Address 1: ZIP/Postal Code":"B7 4BB"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [-3.1532196, 55.9554259]
+     },
+     "properties": {
+     "Company Name":"Geovation Scotland",
+     "Address 1: Street 1":"Meadowbank House",
+     "Address 1: Street 2":"153 London Road",
+     "Address 1: Street 3":"",
+     "Address 1: ZIP/Postal Code":"EH8 7AU"
+     }
+   }
+ ]
+ }

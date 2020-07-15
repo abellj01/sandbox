@@ -4,7 +4,7 @@
 <head>
   <script src="https://www.ordnancesurvey.co.uk/site-elements/js/cookie-control/cookie-control.min.js"></script>
   <script src="https://www.ordnancesurvey.co.uk/site-elements/js/cookie-control/geovation.min.js"></script>
-  <title>OS Features API | BBOX Example | Mapbox GL JS</title>
+  <title>Check the risk levels wind turbines have on birds</title>
   <meta charset='utf-8' />
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <link href="windturbines.css" rel="stylesheet" />
@@ -15,8 +15,46 @@
 <body>
 
   <div id='map'></div>
+  <div class ="map-overlay top">
+    <div id="load-modal" class="modal">
+      <div id="loading-message" class="modal-content">  
+        <p>Loading turbines.</p>
+        <p>This may take a few seconds...</p>
+        <div class="loader"></div>
+      </div>
+    </div>
+    <div class ="map-overlay-inner" id="map-information">
+      <h3>Impact of Wind Turbines on Birds</h3>
+      <div class="colorKey">
+          <div class="keyTitle"><b>Turbines Risk Levels</b></div>
+          <div class="flex-container">
+            <div class="square" id="red"></div>
+            <div>High</div>
+          </div>
+          <div class="flex-container">
+            <div class="square" id="yellow"></div>
+            <div>Medium</div>
+          </div>
+          <div class="flex-container">
+            <div class="square" id="green"></div>
+            <div>Low</div>
+          </div>
+          <div class="key-title"><b>Features</b></div>
+          <div class="flex-container">
+            <div class="square" id="woodland"></div>
+            <div>Woodland</div>
+          </div>
+          <div class="flex-container">
+            <div class="square" id="surface-water"></div>
+            <div>Surface Water</div>
+          </div>
+      </div>
+      <a href="index.html" class="homepage-link">Return to Home Page</a>
+    </div>
+  </div>
+  
 
-  <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
+  <script src='https://unpkg.com/@turf/turf/turf.min.js'></script>
   <script src="windturbines.js"></script>
 
 </body>

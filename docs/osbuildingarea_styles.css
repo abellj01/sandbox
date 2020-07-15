@@ -41,12 +41,12 @@ body {
     font-weight: bold;
 }
 
-.keyTitle {
+.key-title {
     padding-top: 30px;
     margin-bottom: -15px;
 }
 
-.stattionInfo {
+.station-info {
     padding-top: 10px;
 }
 
@@ -70,4 +70,15 @@ body {
 
 #green {
     background-color: #0c0;
+}
+
+.homepage-link {
+    color: #4169E1;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+.homepage-link:hover {
+    display: block;
+    color: #e18741;
 }

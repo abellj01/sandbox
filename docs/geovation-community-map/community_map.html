@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Geovation Community Map</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="https://labs.os.uk/public/os-api-branding/v0.1.0/os-api-branding.css" />
+    <link rel="stylesheet" href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="community_map.css" />
+</head>
+
+<body>
+    <div id="map"></div>
+    <div class='map-overlay top'>
+        <div class='map-overlay-inner' id='map-information'>
+            <div id="onclick-information">
+                <!-- information goes here -->
+            </div>
+            <hr>
+            <div id="startups-supported-legend" class="legend">
+                <h4>Startups Supported</h4>
+                <div class='values'>
+                    <div><span class="large-startups-supported-values"></span>More than 3</div>
+                    <div><span class="medium-startups-supported-values"></span>2-3</div>
+                    <div><span class="small-startups-supported-values"></span>1</div>
+                    <div><span class="zero-startups-supported-values"></span>0</div>
+                </div>
+            </div>
+            <div id="hub-members-legend" class="legend">
+                <h4>Hub Members</h4>
+                <div class='values'>
+                    <div><span class="large-member-values"></span>More than 10</div>
+                    <div><span class="medium-member-values"></span>4-10</div>
+                    <div><span class="small-member-values"></span>1-3</div>
+                    <div><span class="zero-member-values"></span>0</div>
+                </div>
+            </div>
+            <div id="network-connections-legend" class="legend">
+                <h4>Network Connections</h4>
+                <div class='values'>
+                    <div><span class="large-network-values"></span>More than 10</div>
+                    <div><span class="medium-network-values"></span>4-10</div>
+                    <div><span class="small-network-values"></span>1-3</div>
+                    <div><span class="zero-network-values"></span>0</div>
+                </div>
+            </div>
+        </div>
+        <div class='map-overlay-inner' id='map-overlay-options'>
+            <div class = "options-bar">
+            <h1>Geovation Community Map</h1>
+            <a href="javascript:void(0);" class="icon" id="toggle">
+                <i class="fa fa-angle-down" aria-hidden="true" id="hide">
+                    <span class="icon-text">Close</span>
+                </i>
+                <i class="fa fa-angle-up" aria-hidden="true" id="show">
+                    <span class="icon-text">Options</span>
+                </i>
+            </a>
+        </div>
+            <div id="options">
+                <div class="community"></div>
+                <h4>Community</h4>
+                <div class="selection">
+                    <input type="radio" id="startups-supported" checked name="group-type" value="startups-supported">
+                    <label for="startups-supported">Startups <br id="mobile-break">Supported</label>
+                    <br>
+                    <input type="radio" id="hub-members" name="group-type" value="hub-members">
+                    <label for="hub-members">Hub <br id="mobile-break">Members</label>
+                    <br>
+                    <input type="radio" id="network-connections" name="group-type" value="network-connections">
+                    <label for="network-connections">Network <br id="mobile-break">Connections</label>
+                </div>
+                <div class="patrons">
+                    <h4>Patrons</h4>
+                    <div class="checklist">
+                        <div>
+                            <input type="checkbox" checked id="partner-hub-markers">
+                            <img class='marker' src='partner_hubs_marker.png'>
+                            <label for="patrons">Partner Hubs</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" checked id="sponsor-markers">
+                            <img class='marker' src='sponsors_marker.png'>
+                            <label for="sponsors">Sponsors</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" checked id="stakeholder-markers">
+                            <img class='marker' src='stakeholders_marker.png'>
+                            <label for="stakeholders">Stakeholders</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <script src="https://labs.os.uk/public/os-api-branding/v0.1.0/os-api-branding.js"></script>
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js'></script>
+    <script src='https://unpkg.com/@turf/turf/turf.min.js'></script>
+    <script type="module" src="community_map.js"></script>
+
+
+</body>
+
+</html>

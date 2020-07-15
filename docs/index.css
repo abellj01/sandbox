@@ -1,0 +1,169 @@
+
+    body {
+        background-color: #EAE7DC !important;
+        font-family: 'Didact Gothic', sans-serif !important;
+    }
+
+    h1{
+        font-size: 22px !important;
+        padding-bottom: 10px;
+        padding-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        color: #E85A4F;
+    }
+    h2{
+        font-size: 15px !important;
+    }
+
+    #content{
+        margin: 5% 10%;
+    }
+
+    p{
+        font-size: 14px;    
+    }
+    li{
+        font-size: 12px;
+    }
+
+    a:link {
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+        color: #E85A4F;
+    }
+    
+    .feature-project {
+        list-style-type: none;
+        color: #8E8D8A;
+        text-align: justify;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 10px;
+    }
+    
+    
+    .project-link {
+        color: #E98074;
+    }
+
+
+    .list li{
+        list-style: none;
+        margin-right: 25px;
+    }
+    
+    .list li::before {
+        content: "\2022"; 
+        color: #E98074; 
+        font-weight: bold; 
+        display: inline-block; 
+        width: 1em; 
+        margin-left: -1em;
+    }
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 25px;
+        border: solid 2px #8E8D8A !important;
+    }
+
+
+    .responsive{
+        width: 100%;
+        height: auto;
+    }
+
+    
+
+    @media (min-width: 768px){
+
+        body{
+            margin: 5% 55%;
+        }
+     
+        h1 {
+            padding-top: 25px;
+            font-size: 36px !important;
+        }
+    
+        h2 {
+            font-size: 27.5px !important;
+        }
+        
+        .feature-project{
+            padding-top: 20px;
+        }
+        
+        p{
+            font-size: 25px;
+            text-align: justify;
+        }
+        
+        .list{
+            margin-left: 35px;
+        }
+        
+        li{
+            font-size: 25px;
+        }
+    
+        img {
+            height: 225px !important;
+            width: 400px !important;
+            display: block;
+        } 
+    } 
+    
+
+@media (min-width: 992px){
+    body {
+        margin: 5% 17.5%;
+    }
+    
+    h1 {
+        padding-top: 25px;
+        font-size: 32px !important;
+    }
+
+    h2 {
+        font-size: 24px !important;
+    }
+    
+    .feature-project{
+        padding-top: 20px;
+    }
+    
+    p{
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .list{
+        margin-left: 50px;
+    }
+    
+    li{
+        font-size: 16px;
+    }
+
+    img {
+        height: 360px !important;
+        width: 640px !important;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 25px;
+    } 
+}
+
+
+
+
+    
+

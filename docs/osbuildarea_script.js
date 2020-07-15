@@ -1,10 +1,10 @@
-    const apiKey = 'HRQqp4yN8hLHepJEg2fG4kFS69w1oVap';
+    const API_KEY = 'bQCDYqF6VUg0uqFeakUA2bXZ3Mtrmwbk';
 
-    let serviceUrl = 'https://osdatahubapi.os.uk/OSVectorTileAPI/vts/v1';
+    let serviceUrl = 'https://api.os.uk/maps/raster/v1/zxy';
 
     async function fetchStation(stationNumber) {
         let stationParams = {
-            key: apiKey,
+            key: API_KEY,
             service: 'WFS',
             request: 'GetFeature',
             version: '2.0.0',
@@ -39,8 +39,8 @@
         let numbers = randomStations();
         let stationList = [];
         for(let i=0; i<numbers.length; i++){
-            const station = await fetchStation(numbers[i]);
-            stationList.push(station);
+            const STATION = await fetchStation(numbers[i]);
+            stationList.push(STATION);
     }
 
         return stationList;
@@ -50,10 +50,10 @@
     document.body.onload = addElement;
 
     async function addElement() {
-        const stationList = await generatesStations();
-        populatesDropDown(stationList);
-        addDropdownListener(stationList);
-        flyto(stationList[0].geometry.coordinates);
+        const STATION_LIST = await generatesStations();
+        populatesDropDown(STATION_LIST);
+        addDropdownListener(STATION_LIST);
+        flyto(STATION_LIST[0].geometry.coordinates);
     }
 
     function flyto(coords) {
@@ -62,15 +62,16 @@
                     zoom: 14,
                     essential: true
                     })
+    
         drawAll(coords)
     }
 
     function addDropdownListener(stationList) {
         //Click on an option in the nav bar, and the map will fly to the location of that station.
-        document.getElementById("stationSelect").addEventListener('change',  function () {
+        document.getElementById("station-select").addEventListener('change',  function () {
             let coords;
             for (let i = 0; i < stationList.length; i++) {
-                if (document.getElementById("stationSelect").value == stationList[i].properties.Name) {
+                if (document.getElementById("station-select").value == stationList[i].properties.Name) {
                     coords = stationList[i].geometry.coordinates;
                     flyto(coords);
                     break;
@@ -85,24 +86,35 @@
             let newOption = document.createElement("option");
             let newContent = document.createTextNode(stationList[i].properties.Name);
             newOption.appendChild(newContent);
-            let selectDiv = document.getElementById("stationSelect");
+            let selectDiv = document.getElementById("station-select");
             selectDiv.appendChild(newOption);
         }
     }
+
+    let style = {
+        'version': 8,
+        'sources': {
+            'raster-tiles': {
+                'type': 'raster',
+                'tiles': [`${serviceUrl}/Road_3857/{z}/{x}/{y}.png?key=${API_KEY}`],
+                'tileSize': 256,
+                'maxzoom': 20
+            }
+        },
+        'layers': [{
+            'id': 'os-maps-zxy',
+            'type': 'raster',
+            'source': 'raster-tiles'
+        }]
+    };
 
     // Initialize the map object.
     let map = new mapboxgl.Map({
         container: 'map',
         maxZoom: 17,
-        style: serviceUrl + '/resources/styles',
+        style: style,
         center: [-0.104951, 51.520623],
-        zoom: 14,
-        transformRequest: function (url) {
-            url += '?key=' + apiKey + '&srs=3857';
-            return {
-                url: url
-            }
-        }
+        zoom: 14
     });
 
     map.dragRotate.disable(); // Disable map rotation using right click + drag.
@@ -165,24 +177,23 @@
 
     function drawAll(center) {
 
-
-
-
-        const circle_radius = 0.5
+        const CIRCLE_RADIUS = 0.5
         // {Turf.js} Takes the centre point coordinates and calculates a circular polygon
         // of the given a radius in kilometers; and steps for precision.
-        let circle = turf.circle(center, circle_radius, {
+        let circle = turf.circle(center, CIRCLE_RADIUS, {
             steps: 24,
             units: 'kilometers'
         });
         
-
         // Set the GeoJSON data for the 'circle' layer and re-render the map.
         map.getSource('circle').setData(circle);
 
 
+        //flip circle coordinates from [x, y] to [y, x]
+        let flippedCircle = turf.flip(circle)
         // Get the flipped geometry coordinates and return a new space-delimited string.
-        let coords = circle.geometry.coordinates[0].join(' ');
+        let coords = flippedCircle.geometry.coordinates[0].join(' ');
+    
 
         // Create an OGC XML filter parameter value which will select the localBuildings
         // features intersecting the circle polygon coordinates.
@@ -201,7 +212,7 @@
 
         // Define parameters object.
         let wfsParams = {
-            key: apiKey,
+            key: API_KEY,
             service: 'WFS',
             request: 'GetFeature',
             version: '2.0.0',
@@ -248,13 +259,13 @@
                 // To calculate the area, rounded to 3 decimal places
                 let area = 0;
                 let ratio = 0;
-                const circle_area = Math.PI * circle_radius * circle_radius;
+                const CIRCLE_AREA = Math.PI * CIRCLE_RADIUS ** 2;
                 let feature = geojson.features;
                 for (let i = 0; i < feature.length; i++) {
                     // Area in kilometers square
                     area += (geojson.features[i].properties.SHAPE_Area) / 1000000
                 }
-                ratio = area / circle_area
+                ratio = area / CIRCLE_AREA
                 //format the area
                 if (area < 0.01) {
                     document.getElementById('area').innerHTML = "< 0.01"
@@ -295,5 +306,6 @@
             .map(paramName => paramName + '=' + encodeURI(params[paramName]))
             .join('&');
 
-        return 'https://osdatahubapi.os.uk/OSFeaturesAPI/wfs/v1?' + encodedParameters;
+        return 'https://api.os.uk/features/v1/wfs?' + encodedParameters;
     }
+

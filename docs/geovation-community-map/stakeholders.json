@@ -1,0 +1,123 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [-0.0988878, 51.3788606]
+    },
+    "properties": {
+    "Company Name":"HM Land Registry",
+    "Address 1: Street 2":"Bedford Park",
+    "Address 1: City":"Croydon",
+    "Address 1: ZIP/Postal Code":"CR0 2AQ"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [-3.1532196, 55.9554259]
+    },
+    "properties": {
+    "Company Name":"Registers of Scotland",
+    "Address 1: Street 1":"Meadowbank House",
+    "Address 1: Street 2":"153 London Road",
+    "Address 1: Street 3":"",
+    "Address 1: ZIP/Postal Code":"EH8 7AU"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [-1.0800601, 52.8789864]
+    },
+    "properties": {
+    "Company Name":"British Geological Survey",
+    "Address 1: Street 2":"Kingsley Dunham Centre",
+    "Address 1: City":"NOTTINGHAM",
+    "Address 1: ZIP/Postal Code":"NG12 5GG"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [-2.6040392, 51.4517399]
+    },
+    "properties": {
+    "Company Name":"Environment Agency",
+    "Address 1: Street 2":"Deanery Road",
+    "Address 1: City":"Bristol",
+    "Address 1: ZIP/Postal Code":"BS1 5AH"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [-1.1847427, 53.1295632]
+    },
+    "properties": {
+    "Company Name":"The Coal Authority",
+    "Address 1: Street 2":"",
+    "Address 1: City":"Mansfield",
+    "Address 1: ZIP/Postal Code":"NG18 4RG"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [-3.0804034, 51.0233292]
+    },
+    "properties": {
+    "Company Name":"UK Hydrographic Office",
+    "Address 1: Street 2":"",
+    "Address 1: City":"Taunton",
+    "Address 1: ZIP/Postal Code":"TA1 2DN"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [-0.0240517, 51.5046316]
+   },
+    "properties": {
+    "Company Name":"Valuation Office Agency",
+    "Address 1: Street 2":"",
+    "Address 1: City":"London",
+    "Address 1: ZIP/Postal Code":"E14 4PU"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [-0.1036172, 51.5177385]
+    },
+    "properties": {
+    "Company Name":"Omidyar Foundation",
+    "Address 1: Street 2":"",
+    "Address 1: City":"London",
+    "Address 1: ZIP/Postal Code":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [-1.5384064, 50.9226157]
+    },
+    "properties": {
+    "Company Name":"Ordnance Survey",
+    "Address 1: Street 2":"Adanac Drive",
+    "Address 1: City":"Southampton",
+    "Address 1: ZIP/Postal Code":"SO16 0AS"
+    }
+  }
+]
+}

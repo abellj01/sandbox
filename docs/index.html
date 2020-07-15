@@ -2,41 +2,117 @@
 <html>
 
 <head>
-  <script src="https://www.ordnancesurvey.co.uk/site-elements/js/cookie-control/cookie-control.min.js"></script>
-  <script src="https://www.ordnancesurvey.co.uk/site-elements/js/cookie-control/geovation.min.js"></script>
-  <title>Testing OS features Labs</title>
+  <title>Testing OS Features</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Testing OS Data Hub local building features">
   <meta name="keywords" content="OS Data Hub">
+  <link href="index.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
 <body>
-  <h1>Welcome to Geovation Sandbox</h1>
-  <ul>
-    <li>
-      <h2><a href="osbuilding_area_ratio.html">Stations Noise impact</a></h2>
-      <p>This web application aims to measure the noise impact to buildings near any random railway station in the UK and Ireland within a 500m radius. </br>
-        This application is using the content of the <a href="https://osdatahub.os.uk/docs/vts/overview">OS Vector Tile API</a> in the "Road" style to generate the map, as well as the <a
-          href="https://osdatahub.os.uk/docs/wfs/technicalSpecification">OS
-          Features API</a> product OS Zoomstack Layer, with the
-        feature typenames listed below.</p>
-      <ul>
-        <li>Zoomstack_Railway_Stations</li>
-        <li>Zoomstack_District_Buildings</li>
-      </ul>
-      <p>You can test the application by visiting <a href="osbuilding_area_ratio.html">Stations Noise impact</a>. You simply select a station from the dropdown menu and it generates the following information related to the station </p>
-      <ul>
-        <li>The total number of buildings within the radius</li>
-        <li>Their total area</li>
-        <li>The noise impact obtained by the ratio of buildings area to that of the radius</li>
-      </ul>
-    </li>
-    <li>
-      <h2>
-        <a href="windturbines.html">Wind Turbine Impact on Birds</a>
-      </h2>
-    </li>
-  </ul>
+  <div class="container">
+    <h1>Welcome to Geovation Sandbox</h1>
+    <div id="content">
+      <div class="feature-project">
+        <h2>
+          <a href="osbuilding_area_ratio.html" class="project-link">Stations Noise Impact</a>
+        </h2>
+        <p>This web application aims to measure the noise impact to buildings near any random railway station in the UK
+          and Ireland within a 500m radius. </br>
+          This application is using the content of the <a href="https://osdatahub.os.uk/docs/vts/overview">OS Vector
+            Tile API</a> in the "Road" style to generate the map, as well as the <a
+            href="https://osdatahub.os.uk/docs/wfs/technicalSpecification">OS
+            Features API</a> product OS Zoomstack Layer, with the
+          feature typenames listed below:</p>
+        <ul class="list">
+          <li>Zoomstack_Railway_Stations</li>
+          <li>Zoomstack_District_Buildings</li>
+          <br>
+        </ul>
+        <p>You simply select a station from the dropdown menu and it generates the following information related to the
+          station </p>
+        <ul class="list">
+          <li>The total number of buildings within the radius</li>
+          <li>Their total area</li>
+          <li>The noise impact obtained by the ratio of buildings area to that of the radius</li>
+        </ul>
+        <a href="osbuilding_area_ratio.html" class="project-link">
+          <img src="station_noise.png" alt="Station Noise Project" class="responsive">
+        </a>
+      </div>
+      <br>
+      <div class="feature-project">
+        <h2>
+          <a href="windturbines.html" class="project-link">Impact of Wind Turbines on Birds</a>
+        </h2>
+        <p>Check the risk levels wind turbines have on birds. The risk level turbines have on woodland
+          and surface water birds is calculated by finding the areas of each feature within a 5 mile
+          radius of a turbine, then combined to give an overall risk score. The features used in this project are:
+        </p>
+        <ul class="list">
+          <li>Topography_TopographicArea</li>
+          <li>Zoomstack_Woodland</li>
+          <li>Zoomstack_Surfacewater</li>
+        </ul>
+        <a href="windturbines.html">
+          <img src="turbine_risk.png" alt="Wind Turbines Project" class="responsive">
+        </a>
+      </div>
+      <br>
+      <div class="feature-project">
+        <h2>
+          <a href="hospitals.html" class="project-link">Finding the Nearest Secondary Schools to Hospitals</a>
+        </h2>
+        <p>This project was created in light of the coronavirus pandemic. A scenario was created to address
+          a potential problem that could arise from the coronavirus, and OS Features from the DataHub API were used to
+          create a hypothetical solution.
 
+          <br><br>At the moment, hospitals are incredibly stretched and find it difficult to cope
+          with the sheer number of coronavirus patients. In addition, schools are currently closed for the next few
+          months.
+          Another potential issue that arose was the number of patients contracting the coronavirus whilst in hospital
+          for
+          a non-coronavirus related issue. One possible solution to address these issues is to use schools as temporary
+          'coronavirus' hospitals or quarantine centres. Patients can stay and be treated in the schools, thus, reducing
+          the risk of spreading the disease. Quarantine centres have been used in countries around the world, with a
+          great
+          degree of success.
+
+          <br><br>For this project, I identified the top 10 UTL areas with the most coronavirus cases as of 8th April
+          2020, using
+          the <a
+            href="https://coronavirus.data.gov.uk/?_ga=2.16791665.977677515.1587990158-523975224.1578581356#local-authorities">gov.uk
+            website</a>
+          I matched these areas with the Highways_Street Feature, and used the Sites_FunctionalSite feature to add
+          hospitals
+          and Secondary Schools to the map. When you click on a hospital, it will show the nearest Secondary School to
+          it, and
+          this distance in miles it is from the hospital. The features I used in this project are:
+        </p>
+        <ul class="list">
+          <li>Sites_FunctionalSite</li>
+          <li>Highways_Street</li>
+        </ul>
+        <a href="hospitals.html">
+          <img src="nearestschools.png" alt="Hospitals Project" class="responsive">
+        </a>
+      </div>
+      <div class="feature-project">
+          <h2>
+            <a href="geovation-community-map/community_map.html" class="project-link">Geovation Community Map</a>
+          </h2>
+          <p>Geovation Community Map (Work in progress).
+          </p>
+          <a href="geovation-community-map/community_map.html">
+            <img src="geovation-community-map/community_map.png" alt="Community Map Project" class="responsive">
+          </a>
+        </div>
+    </div>
+  </div>
 </body>
 
 </html>

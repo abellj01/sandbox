@@ -1,0 +1,295 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "Company Name": "Portable Ecosystems Limited",
+      "City": "Aberdeen",
+      "County": "City of Aberdeen"
+    },
+    {
+      "Company Name": "Velocity RDT Ltd",
+      "City": "Bentley",
+      "County": "Hampshire"
+    },
+    {
+      "Company Name": "OFFiGOUK LTD",
+      "City": "Blackpool",
+      "County": "Lancashire"
+    },
+    {
+      "Company Name": "Atmo",
+      "City": "Bristol ",
+      "County": "Bristol"
+    },
+    {
+      "Company Name": "City to Sea",
+      "City": "Bristol ",
+      "County": "Bristol"
+    },
+    {
+      "Company Name": "Urban Intelligence",
+      "City": "Cardiff",
+      "County": "South Glamorgan"
+    },
+    {
+      "Company Name": "Shipamax",
+      "City": "Chelmsford",
+      "County": "Essex"
+    },
+    {
+      "Company Name": "Folarity",
+      "City": "Edinburgh",
+      "County": "City of Edinburgh"
+    },
+    {
+      "Company Name": "Ramblers Scotland",
+      "City": "Edinburgh",
+      "County": "City of Edinburgh"
+    },
+    {
+      "Company Name": "Walks and Waterfalls",
+      "City": "Edinburgh ",
+      "County": "City of Edinburgh"
+    },
+    {
+      "Company Name": "Savvy",
+      "City": "Leeds",
+      "County": "West Yorkshire"
+    },
+    {
+      "Company Name": "AskPorter",
+      "City": "London",
+      "County": "Greater London"
+    },
+    {
+      "Company Name": "City Seer",
+      "City": "London",
+      "County": "Greater London"
+    },
+    {
+      "Company Name": "Digital Land Solutions Limited",
+      "City": "London",
+      "County": "City and County of the City of London"
+    },
+    {
+      "Company Name": "Flock Ltd",
+      "City": "London",
+      "County": "City and County of the City of London"
+    },
+    {
+      "Company Name": "FlowX",
+      "City": "London",
+      "County": "City and County of the City of London"
+    },
+    {
+      "Company Name": "Fruumi",
+      "City": "London",
+      "County": "Greater London"
+    },
+    {
+      "Company Name": "Gather Hub Ltd",
+      "City": "London",
+      "County": "City and County of the City of London"
+    },
+    {
+      "Company Name": "GetRentr t/a Kamma",
+      "City": "London",
+      "County": "City and County of the City of London"
+    },
+    {
+      "Company Name": "Hammer",
+      "City": "London",
+      "County": "Greater London"
+    },
+    {
+      "Company Name": "Lairvue",
+      "City": "London",
+      "County": "Greater London"
+    },
+    {
+      "Company Name": "Land Technologies Ltd",
+      "City": "London",
+      "County": "City and County of the City of London"
+    },
+    {
+      "Company Name": "Localistico",
+      "City": "London",
+      "County": "Greater London"
+    },
+    {
+      "Company Name": "Mothive",
+      "City": "London",
+      "County": "Greater London"
+    },
+    {
+      "Company Name": "Onigo",
+      "City": "London",
+      "County": "City and County of the City of London"
+    },
+    {
+      "Company Name": "Openplay Ltd",
+      "City": "London",
+      "County": "Greater London"
+    },
+    {
+      "Company Name": "Orbital Witness Limited",
+      "City": "London",
+      "County": "Greater London"
+    },
+    {
+      "Company Name": "Passive Eye",
+      "City": "London",
+      "County": "Greater London"
+    },
+    {
+      "Company Name": "Passive Eye Ltd",
+      "City": "London",
+      "County": "Greater London"
+    },
+    {
+      "Company Name": "Pedals",
+      "City": "London",
+      "County": "Greater London"
+    },
+    {
+      "Company Name": "Pocket Pals",
+      "City": "London",
+      "County": "City and County of the City of London"
+    },
+    {
+      "Company Name": "Podaris Ltd",
+      "City": "London",
+      "County": "Greater London"
+    },
+    {
+      "Company Name": "Property-Markets",
+      "City": "London",
+      "County": "Greater London"
+    },
+    {
+      "Company Name": "Qualis Flow",
+      "City": "London",
+      "County": "Greater London"
+    },
+    {
+      "Company Name": "RenKap",
+      "City": "London",
+      "County": "Greater London"
+    },
+    {
+      "Company Name": "Safe and the City",
+      "City": "London",
+      "County": "City and County of the City of London"
+    },
+    {
+      "Company Name": "Signalbox",
+      "City": "London",
+      "County": "Greater London"
+    },
+    {
+      "Company Name": "Skyroom",
+      "City": "London",
+      "County": "City and County of the City of London"
+    },
+    {
+      "Company Name": "Skyscape Technologies Ltd",
+      "City": "London",
+      "County": "City and County of the City of London"
+    },
+    {
+      "Company Name": "SociAbiliy",
+      "City": "London",
+      "County": "City and County of the City of London"
+    },
+    {
+      "Company Name": "The Future Fox",
+      "City": "London",
+      "County": "Greater London"
+    },
+    {
+      "Company Name": "Thirdfort",
+      "City": "London",
+      "County": "Greater London"
+    },
+    {
+      "Company Name": "Trik",
+      "City": "London",
+      "County": "City and County of the City of London"
+    },
+    {
+      "Company Name": "WatchKeeper International",
+      "City": "London",
+      "County": "City and County of the City of London"
+    },
+    {
+      "Company Name": "Winston Technologies",
+      "City": "London",
+      "County": "Greater London"
+    },
+    {
+      "Company Name": "Go Jauntly ",
+      "City": "London ",
+      "County": "Greater London"
+    },
+    {
+      "Company Name": "Utility Survey Exchange Ltd",
+      "City": "Loughborough",
+      "County": "Leicestershire"
+    },
+    {
+      "Company Name": "Veya",
+      "City": "Manchester",
+      "County": "Greater Manchester"
+    },
+    {
+      "Company Name": "HIPLA",
+      "City": "Nantwich",
+      "County": "Cheshire"
+    },
+    {
+      "Company Name": "Pathmakers CIO",
+      "City": "Norwich",
+      "County": "Norfolk"
+    },
+    {
+      "Company Name": "Kids Against Plastic",
+      "City": "Nottingham",
+      "County": "Nottinghamshire"
+    },
+    {
+      "Company Name": "Flood Network",
+      "City": "Oxford",
+      "County": "Oxfordshire"
+    },
+    {
+      "Company Name": "Insight Imaging",
+      "City": "Sheffield",
+      "County": "South Yorkshire"
+    },
+    {
+      "Company Name": "Plastic Patrol CIC",
+      "City": "South Croydon",
+      "County": "Greater London"
+    },
+    {
+      "Company Name": "AskPorter",
+      "City": "St Albans",
+      "County": "Hertfordshire"
+    },
+    {
+      "Company Name": "Droneprep",
+      "City": "Stroud",
+      "County": "Gloucestershire"
+    },
+    {
+      "Company Name": "Nautoguide Ltd",
+      "City": "Swindon",
+      "County": "Wiltshire"
+    },
+    {
+      "Company Name": "Runfriendly (Venlige)",
+      "City": "Watford",
+      "County": "Hertfordshire"
+    }
+  ]
+}

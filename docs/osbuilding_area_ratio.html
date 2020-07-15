@@ -18,16 +18,16 @@
     <div class='map-overlay-inner'>
       <h3>Stations Noise impact</h3>
       <div>
-        <select id="stationSelect">
+        <select id="station-select">
           <!-- Option tags from addElement function go here  -->
         </select>
       </div>
-      <div class="stattionInfo"><b>The station information</b></div>
+      <div class="station-info"><b>The station information</b></div>
       <div>Number of Buildings: <span id='feature-count'></span></div>
       <div>Total buildings area (<b>km<sup>2</sup></b>): <span id='area'></span></div>
       <div>Noise Impact ratio: <span id='ratio'></span></div>
-      <div class="colorKey">
-        <div class="keyTitle"><b>Noise Impact Colour code </b></div>
+      <div class="color-key">
+        <div class="key-title"><b>Noise Impact Colour code </b></div>
         <div class="flex-container">
           <div class="square" id="red"></div>
           <div>&#8805; 0.45</div>
@@ -45,9 +45,10 @@
           <div> &#60; 0.15 </div>
         </div>
       </div>
+      <a href="index.html" class="homepage-link">Return to Home Page</a>
     </div>
   </div>
-  <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
+  <script src='https://unpkg.com/@turf/turf/turf.min.js'></script>
   <script src="osbuildarea_script.js"></script>
 </body>
 

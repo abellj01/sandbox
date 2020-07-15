@@ -1,0 +1,187 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [-1.5833751, 54.8043257]
+    },
+    "properties": {
+    "Company Name":"Northumbrian Water Ltd",
+    "Address 1: Street 2":"Pity Me",
+    "Address 1: City":"Durham",
+    "Address 1: ZIP/Postal Code":"DH1 5FJ"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [-0.1069984, 51.5238786]
+    },
+    "properties": {
+    "Company Name":"Springwise Intelligence Ltd",
+    "Address 1: Street 2":"1 Sekforde Street",
+    "Address 1: City":" London ",
+    "Address 1: ZIP/Postal Code":"EC1R 0BE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [-1.409342, 51.0267818]
+    },
+    "properties": {
+    "Company Name":"IBM UK Ltd",
+    "Address 1: Street 2":"",
+    "Address 1: City":"Winchester",
+    "Address 1: ZIP/Postal Code":"SO21 2JN"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [-3.9306254, 56.1181785]
+    },
+    "properties": {
+    "Company Name":"Greenspace Scotland",
+    "Address 1: Street 2":"Forthside Way",
+    "Address 1: City":"Stirling",
+    "Address 1: ZIP/Postal Code":"FK8 1QZ "
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [-0.0205687, 51.5049072]
+    },
+    "properties": {
+    "Company Name":"Intel Corporation UK Ltd",
+    "Address 1: Street 2":"One Canada Square",
+    "Address 1: City":"London",
+    "Address 1: ZIP/Postal Code":"E14 5AB"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [-1.8182898, 51.5568052]
+    },
+    "properties": {
+    "Company Name":"Hexagon Geospatial",
+    "Address 1: Street 2":"Great Western Way",
+    "Address 1: City":"Swindon",
+    "Address 1: ZIP/Postal Code":"SN5 7XP"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [-1.7870084, 51.5670749]
+    },
+    "properties": {
+    "Company Name":"Innovate UK",
+    "Address 1: Street 2":"",
+    "Address 1: City":"Swindon",
+    "Address 1: ZIP/Postal Code":"SN2 1FL"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [-0.0176472, 51.5048313]
+    },
+    "properties": {
+    "Company Name":"KPMG",
+    "Address 1: Street 2":"",
+    "Address 1: City":"London",
+    "Address 1: ZIP/Postal Code":"E14 5GL"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [-0.4232733, 50.8337421]
+    },
+    "properties": {
+    "Company Name":"Southern Water Services Ltd",
+    "Address 1: Street 2":"Yeoman Road",
+    "Address 1: City":"Worthing",
+    "Address 1: ZIP/Postal Code":"BN13 8NX"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [-4.2625987, 55.8570954]
+    },
+    "properties": {
+    "Company Name":"Glasgow City Council",
+    "Address 1: Street 2":"20 Trongate",
+    "Address 1: City":"Glasgow",
+    "Address 1: ZIP/Postal Code":"G1 5NA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [-1.7058729, 51.131233]
+    },
+    "properties": {
+    "Company Name":"DSTL",
+    "Address 1: Street 2":"Room G02, Building 5",
+    "Address 1: City":"Salisbury",
+    "Address 1: ZIP/Postal Code":"SP4 0JQ"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [-1.7183139, 52.4684856]
+    },
+    "properties": {
+    "Company Name":"Energy Systems Catapult",
+    "Address 1: Street 2":"",
+    "Address 1: City":"Birmingham",
+    "Address 1: ZIP/Postal Code":"B37 7YB"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [-1.3249577, 51.6209164]
+    },
+    "properties": {
+    "Company Name":"Pineapple Partnerships",
+    "Address 1: Street 2":"",
+    "Address 1: City":"Oxfordshire",
+    "Address 1: ZIP/Postal Code":"OX13 6SS"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [-2.7251162, 53.7592983]
+    },
+    "properties": {
+    "Company Name":"Places For People",
+    "Address 1: Street 2":"",
+    "Address 1: City":"Preston",
+    "Address 1: ZIP/Postal Code":"PR2 2YB"
+    }
+  }
+]
+}

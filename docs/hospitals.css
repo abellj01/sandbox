@@ -1,0 +1,131 @@
+body { 
+    margin:0; 
+    padding:0; 
+}
+#map { 
+    position:absolute; 
+    top:0; 
+    bottom:0; 
+    width:100%; 
+}
+
+.map-overlay {
+    font: 14px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    padding: 10px;
+}
+
+.map-overlay .map-overlay-inner {
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.10);
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.map-overlay-inner div {
+    margin-top: 10px;
+}
+
+#loading-message {
+    padding-top: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.modal {
+    display: block;
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #00F;
+    width: 80%;
+  }
+
+  .loader {
+    border: 16px solid #ccccff;
+    border-top: 16px solid #00F;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+
+#hospital-name{
+    text-align: center; 
+    position: relative; 
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+}
+
+.key-title {
+    padding-top: 30px;
+    margin-bottom: -15px;
+}
+
+
+.square {
+    height: 25px;
+    width: 37.5px;
+    margin-right: 10px;
+}
+
+#hospitals {
+    background-color: #FF1493;
+    border: solid 1px #000;
+}
+
+#schools {
+    background-color: #20B2AA;
+    border: solid 1px #000;
+}
+
+#nearest-school{               
+    background-color: #D2691E;
+    border: solid 1px #000;
+}
+
+.mapboxgl-popup-content {
+    font-size: 12px;
+    text-align: center;
+}
+
+.homepage-link {
+    color: #4169E1;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.homepage-link:hover {
+    display: block;
+    color: #e18741;
+}
